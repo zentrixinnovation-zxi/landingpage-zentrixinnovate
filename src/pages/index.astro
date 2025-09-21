@@ -1,11 +1,423 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <!-- Hero / Encabezado -->
+  <section
+    id="hero"
+    class="min-h-screen pt-28 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 px-6 md:px-16 bg-white text-gray-900"
+  >
+    <!-- Columna de texto -->
+    <div class="flex-1 text-center md:text-left md:pl-12" data-aos="fade-up">
+      <h1
+        class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-blue-600 leading-snug"
+      >
+        Zentrix Innovate
+      </h1>
+      <p class="text-xl text-gray-400 mb-2" data-aos="fade-up" data-aos-delay="150">
+        Transformamos ideas en soluciones digitales efectivas
+      </p>
+      <p class="text-base sm:text-lg md:text-xl mb-6 max-w-lg text-gray-500 mx-auto md:mx-0" data-aos="fade-up" data-aos-delay="300">
+        Innovando para un futuro mejor: soluciones digitales que transforman tu negocio.
+      </p>
+      <div
+        class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <a
+          href="#contacto"
+          class="px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors shadow-md"
+        >
+          Explora nuestros servicios
+        </a>
+      </div>
+    </div>
+
+    <!-- Columna de imagen / mockup -->
+    <div
+      class="flex-1 flex justify-center mt-8 md:mt-0"
+      data-aos="zoom-in"
+      data-aos-delay="400"
+    >
+      <div
+        class="w-full max-w-sm sm:max-w-md h-64 sm:h-80 bg-blue-50 rounded-lg flex items-center justify-center border border-blue-200 shadow-lg"
+      >
+        <span class="text-blue-600 font-semibold text-center px-4">
+          Logo / Imagen destacada aquí
+        </span>
+      </div>
+    </div>
+
+    <a
+      href="#problema"
+      class="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce"
+      data-aos="fade-up"
+      data-aos-delay="750"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-10 w-10 text-blue-600"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M19 9l-7 7-7-7"></path>
+      </svg>
+    </a>
+  </section>
+
+  <!-- Sección Problema -->
+  <section
+    id="problema"
+    class="min-h-screen pt-16 pb-20 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 px-6 md:px-16 bg-gradient-to-r from-blue-50 to-white text-gray-900"
+  >
+    <!-- Imagen / Video -->
+    <div class="flex-1 flex justify-center mb-8 md:mb-0" data-aos="fade-right">
+      <div
+        class="w-full max-w-sm sm:max-w-md h-64 sm:h-96 bg-white rounded-xl flex items-center justify-center border border-blue-100 shadow-lg"
+      >
+        <span class="text-blue-600 font-semibold text-lg text-center px-4">
+          Imagen / Video aquí
+        </span>
+      </div>
+    </div>
+
+    <!-- Texto -->
+    <div
+      class="flex-1 text-center md:text-left md:pl-12"
+      data-aos="fade-left"
+      data-aos-delay="200"
+    >
+      <h2
+        class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-blue-800 leading-snug"
+      >
+        El reto de nuestros clientes
+      </h2>
+      <p
+        class="text-base sm:text-lg md:text-xl mb-4 sm:mb-6 max-w-lg text-gray-700 mx-auto md:mx-0"
+      >
+        Muchos negocios enfrentan desafíos para digitalizarse, optimizar sus
+        procesos y llegar a sus clientes de manera efectiva. Nuestro objetivo es
+        mostrar cómo nuestras soluciones ayudan a superar estos obstáculos.
+      </p>
+      <a
+        href="#solucion"
+        data-aos="fade-up"
+        data-aos-delay="400"
+        class="inline-block px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors shadow-md"
+      >
+        Descubre la solución
+      </a>
+    </div>
+  </section>
+
+  <!-- Sección Solución / Servicios Destacados -->
+  <section
+    id="solucion"
+    class="min-h-screen pt-16 pb-16 flex flex-col justify-center items-center bg-white px-6"
+  >
+    <!-- Título y párrafo -->
+    <div class="max-w-5xl mx-auto text-center" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-800">
+        Nuestra Solución
+      </h2>
+      <p class="text-lg text-gray-700 mb-8 text-center">
+        Desarrollamos sitios web, apps móviles y soluciones digitales a medida
+        para que tu negocio crezca y se destaque.
+      </p>
+    </div>
+
+    <!-- Imagen / mockup -->
+    <div
+      class="w-full max-w-2xl mx-auto mb-12"
+      data-aos="zoom-in"
+      data-aos-delay="200"
+    >
+      <div
+        class="w-full h-64 bg-white rounded-lg flex items-center justify-center border border-blue-200 shadow-md"
+      >
+        <span class="text-blue-600 font-semibold text-center">
+          Mockup / Imagen destacada aquí
+        </span>
+      </div>
+    </div>
+
+    <!-- Servicios / Beneficios -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Servicio 1 -->
+      <div
+        data-aos="fade-up"
+        data-aos-delay="0"
+        class="bg-white border border-blue-100 rounded-xl p-6 text-center shadow hover:shadow-lg transition-shadow"
+      >
+        <div
+          class="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full bg-blue-100 text-blue-600"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M13 16h-1v-4h-1m0-4h.01M12 20h.01M4 6h16M4 10h16M4 14h16M4 18h16"
+            ></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Desarrollo Web</h3>
+        <p class="text-gray-700">
+          Creamos sitios modernos, responsivos y optimizados.
+        </p>
+      </div>
+
+      <!-- Servicio 2 -->
+      <div
+        data-aos="fade-up"
+        data-aos-delay="200"
+        class="bg-white border border-green-100 rounded-xl p-6 text-center shadow hover:shadow-lg transition-shadow"
+      >
+        <div
+          class="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full bg-green-100 text-green-600"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 13l4 4L19 7"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Apps Móviles</h3>
+        <p class="text-gray-700">Aplicaciones intuitivas para Android e iOS.</p>
+      </div>
+
+      <!-- Servicio 3 -->
+      <div
+        data-aos="fade-up"
+        data-aos-delay="400"
+        class="bg-white border border-purple-100 rounded-xl p-6 text-center shadow hover:shadow-lg transition-shadow"
+      >
+        <div
+          class="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full bg-purple-100 text-purple-600"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2-1.343-2-3-2zm0 0V4m0 12v4"
+            ></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">WordPress / CMS</h3>
+        <p class="text-gray-700">
+          Soluciones fáciles de gestionar y escalar tu negocio.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cómo trabajamos / Proceso -->
+  <section
+    id="proceso"
+    class="min-h-screen pt-42 pb-8 bg-gradient-to-r from-blue-100 to-white px-6 flex flex-col items-center"
+  >
+    <div class="max-w-5xl text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-800">
+        Cómo trabajamos
+      </h2>
+      <p class="text-gray-700 text-lg">
+        Nuestro proceso asegura resultados efectivos y eficientes. Cada etapa
+        está diseñada para maximizar el impacto y la calidad de tu proyecto.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl">
+      <!-- Paso 1 -->
+      <div
+      data-aos="fade-up" data-aos-delay="0"
+        class="bg-white border border-blue-100 rounded-xl p-8 text-center shadow hover:shadow-lg transition-shadow"
+      >
+        <div
+          class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-blue-100 text-blue-600"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-8 h-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 12h6m-6 4h6m-6-8h6M4 6h16M4 10h16M4 14h16M4 18h16"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-blue-600">Planificación</h3>
+        <p class="text-gray-700">
+          Analizamos tu proyecto y definimos objetivos claros, creando un plan
+          estratégico.
+        </p>
+      </div>
+
+      <!-- Paso 2 -->
+      <div
+      data-aos="fade-up" data-aos-delay="200"
+        class="bg-white border border-green-100 rounded-xl p-8 text-center shadow hover:shadow-lg transition-shadow"
+      >
+        <div
+          class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-green-100 text-green-600"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-8 h-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 7h18M3 12h18M3 17h18"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-green-600">Desarrollo</h3>
+        <p class="text-gray-700">
+          Diseñamos y desarrollamos soluciones adaptadas a tus necesidades con
+          creatividad y tecnología de punta.
+        </p>
+      </div>
+
+      <!-- Paso 3 -->
+      <div
+      data-aos="fade-up" data-aos-delay="400"
+        class="bg-white border border-purple-100 rounded-xl p-8 text-center shadow hover:shadow-lg transition-shadow"
+      >
+        <div
+          class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-purple-100 text-purple-600"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-8 h-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 13l4 4L19 7"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-purple-600">Entrega</h3>
+        <p class="text-gray-700">
+          Implementamos, revisamos y entregamos con soporte garantizado,
+          asegurando tu satisfacción.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portafolio / Proyectos -->
+  <section
+    id="portafolio"
+    class="pt-38 pb-24 bg-gray-50 px-6 flex flex-col items-center"
+  >
+    <div class="max-w-5xl text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-800">
+        Portafolio
+      </h2>
+      <p class="text-gray-700 text-lg">
+        Algunos de nuestros proyectos recientes o ejemplos de trabajo.
+      </p>
+    </div>
+
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl w-full"
+    >
+      <div
+        class="h-64 bg-white rounded-xl flex items-center justify-center shadow-md border border-blue-100 hover:shadow-xl transition-shadow"
+      >
+        <span class="text-blue-600 font-semibold text-lg" data-aos="zoom-in" data-aos-delay="0">Proyecto 1</span>
+      </div>
+      <div
+        class="h-64 bg-white rounded-xl flex items-center justify-center shadow-md border border-green-100 hover:shadow-xl transition-shadow"
+      >
+        <span class="text-green-600 font-semibold text-lg" data-aos="zoom-in" data-aos-delay="100">Proyecto 2</span>
+      </div>
+      <div
+        class="h-64 bg-white rounded-xl flex items-center justify-center shadow-md border border-purple-100 hover:shadow-xl transition-shadow"
+      >
+        <span class="text-purple-600 font-semibold text-lg" data-aos="zoom-in" data-aos-delay="200">Proyecto 3</span>
+      </div>
+      <div
+        class="h-64 bg-white rounded-xl flex items-center justify-center shadow-md border border-yellow-100 hover:shadow-xl transition-shadow"
+      >
+        <span class="text-yellow-600 font-semibold text-lg" data-aos="zoom-in" data-aos-delay="300">Proyecto 4</span>
+      </div>
+      <div
+        class="h-64 bg-white rounded-xl flex items-center justify-center shadow-md border border-pink-100 hover:shadow-xl transition-shadow"
+      >
+        <span class="text-pink-600 font-semibold text-lg" data-aos="zoom-in" data-aos-delay="400">Proyecto 5</span>
+      </div>
+      <div
+        class="h-64 bg-white rounded-xl flex items-center justify-center shadow-md border border-teal-100 hover:shadow-xl transition-shadow"
+      >
+        <span class="text-teal-600 font-semibold text-lg" data-aos="zoom-in" data-aos-delay="500">Proyecto 6</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section
+    id="cta-final"
+    class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-r from-blue-50 to-blue-100 px-6 text-gray-900"
+  >
+    <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
+      <p
+        class="text-lg text-blue-700 mb-4 font-semibold uppercase tracking-wide"
+      >
+        ¿Listo para comenzar?
+      </p>
+      <h2 class="text-3xl md:text-5xl font-bold mb-6 text-blue-800">
+        Impulsa tu proyecto con Zentrix Innovate
+      </h2>
+      <p class="text-gray-700 mb-12 text-lg">
+        Hablemos de tus ideas y llevemos tu negocio al siguiente nivel con
+        soluciones digitales a medida.
+      </p>
+      <a
+        href="#contacto" data-aos="zoom-in" data-aos-delay="200"
+        class="px-10 py-4 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors shadow-lg transform hover:scale-105"
+      >
+        Comienza tu proyecto
+      </a>
+    </div>
+  </section>
 </Layout>
