@@ -3,12 +3,10 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <!-- Hero / Encabezado -->
   <section
     id="hero"
     class="min-h-screen pt-28 md:pt-0 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 px-6 md:px-16 bg-white text-gray-900"
   >
-    <!-- Columna de texto -->
     <div class="flex-1 text-center md:text-left md:pl-12" data-aos="fade-up">
       <h1
         class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-blue-600 leading-tight"
@@ -48,7 +46,6 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
 
-    <!-- Columna de imagen / mockup -->
     <div
       class="flex-1 flex justify-center mt-8 md:mt-0 shadow-2xl"
       data-aos="zoom-in"
@@ -63,7 +60,7 @@ import Layout from "../layouts/Layout.astro";
 
     <a
       href="#problema"
-      class="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce"
+      class="hidden lg:block absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce"
       data-aos="fade-up"
       data-aos-delay="750"
     >
@@ -83,41 +80,43 @@ import Layout from "../layouts/Layout.astro";
     </a>
   </section>
 
-  <!-- Sección Problema -->
   <section
     id="problema"
-    class="min-h-screen pt-16 pb-20 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 px-6 md:px-16 bg-gradient-to-r from-blue-50 to-white text-gray-900"
+    class="min-h-screen pt-16 pb-20 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 px-4 sm:px-6 md:px-16 bg-gradient-to-r from-blue-50 to-white text-gray-900 overflow-x-hidden"
   >
-    <!-- Imagen / Video -->
-    <div class="flex-1 flex justify-center mb-8 md:mb-0" data-aos="fade-right">
+    <div
+      class="flex-1 w-full flex justify-center md:justify-end"
+      data-aos="fade-right"
+    >
       <img
         src="/problem-image.png"
         alt="Zentrix Innovate - Problemas digitales"
-        class="w-auto h-auto bg-cover hover:scale-110 duration-200"
+        class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-auto object-contain hover:scale-105 transition-transform duration-200"
       />
     </div>
 
-    <!-- Texto -->
+    <!-- Texto primero en mobile -->
     <div
       class="flex-1 text-center md:text-left md:pl-12"
       data-aos="fade-left"
       data-aos-delay="200"
     >
       <h2
-        class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-blue-800 leading-snug"
+        class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-blue-800 leading-snug break-words"
       >
         Los retos digitales que frenan a tu negocio
       </h2>
+
       <p
-        class="text-base sm:text-lg md:text-xl mb-4 sm:mb-6 max-w-lg text-gray-700 mx-auto md:mx-0"
+        class="text-base sm:text-lg md:text-xl mb-4 sm:mb-6 text-gray-700 mx-auto md:mx-0 break-words max-w-md md:max-w-lg"
       >
         Muchos negocios pierden oportunidades porque sus procesos no están
         digitalizados, sus páginas web no generan resultados o sus sistemas
-        simplemente no funcionan como deberían. En <span
-          class="font-semibold text-blue-600">Zentrix Innovate</span
-        >
+        simplemente no funcionan como deberían. En
+        <span class="font-semibold text-blue-600">Zentrix Innovate</span>
         entendemos estos desafíos y sabemos cómo resolverlos.
       </p>
+
       <a
         href="#solucion"
         data-aos="fade-up"
@@ -127,14 +126,13 @@ import Layout from "../layouts/Layout.astro";
         Conoce nuestras soluciones
       </a>
     </div>
+
   </section>
 
-  <!-- Sección Solución / Servicios Destacados -->
   <section
     id="solucion"
     class="min-h-screen pt-28 pb-10 flex flex-col justify-center items-center bg-white px-6"
   >
-    <!-- Título y párrafo -->
     <div class="max-w-5xl mx-auto text-center" data-aos="fade-up">
       <h2 class="text-2xl md:text-4xl font-bold mb-4 text-blue-800">
         Soluciones digitales que transforman tu negocio
@@ -149,7 +147,6 @@ import Layout from "../layouts/Layout.astro";
       </p>
     </div>
 
-    <!-- Imagen / mockup -->
     <div
       class="w-full max-w-2xl mx-auto mb-4 bg-transparent"
       data-aos="zoom-in"
@@ -162,9 +159,7 @@ import Layout from "../layouts/Layout.astro";
       />
     </div>
 
-    <!-- Servicios / Beneficios -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <!-- Servicio 1 -->
       <div
         data-aos="fade-up"
         data-aos-delay="0"
@@ -196,7 +191,6 @@ import Layout from "../layouts/Layout.astro";
         </p>
       </div>
 
-      <!-- Servicio 2 -->
       <div
         data-aos="fade-up"
         data-aos-delay="200"
@@ -227,7 +221,6 @@ import Layout from "../layouts/Layout.astro";
         </p>
       </div>
 
-      <!-- Servicio 3 -->
       <div
         data-aos="fade-up"
         data-aos-delay="400"
@@ -261,7 +254,6 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
-  <!-- Cómo trabajamos / Proceso -->
   <section
     id="proceso"
     class="min-h-screen pt-42 pb-8 bg-gradient-to-r from-blue-100 to-white px-6 flex flex-col items-center"
@@ -280,7 +272,6 @@ import Layout from "../layouts/Layout.astro";
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
-      <!-- Paso 1 -->
       <div
         data-aos="fade-up"
         data-aos-delay="0"
@@ -299,7 +290,6 @@ import Layout from "../layouts/Layout.astro";
         </p>
       </div>
 
-      <!-- Paso 2 -->
       <div
         data-aos="fade-up"
         data-aos-delay="200"
@@ -318,7 +308,6 @@ import Layout from "../layouts/Layout.astro";
         </p>
       </div>
 
-      <!-- Paso 3 -->
       <div
         data-aos="fade-up"
         data-aos-delay="500"
@@ -339,82 +328,6 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
-  <!-- Portafolio / Proyectos -->
-  <!-- <section
-    id="portafolio"
-    class="pt-28 pb-24 bg-gray-50 px-6 flex flex-col items-center"
-  >
-    <div class="max-w-5xl text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-800">
-        Proyectos destacados
-      </h2>
-      <p class="text-gray-700 text-lg">
-        Estas son algunas de las soluciones digitales que hemos desarrollado
-        para ayudar a negocios a crecer, innovar y diferenciarse.
-      </p>
-    </div>
-
-    <div
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl w-full"
-    >
-      <div
-        class="h-64 bg-white rounded-xl flex items-center justify-center shadow-md border border-blue-100 hover:shadow-xl transition-shadow"
-      >
-        <span
-          class="text-blue-600 font-semibold text-lg"
-          data-aos="zoom-in"
-          data-aos-delay="0">Proyecto 1</span
-        >
-      </div>
-      <div
-        class="h-64 bg-white rounded-xl flex items-center justify-center shadow-md border border-green-100 hover:shadow-xl transition-shadow"
-      >
-        <span
-          class="text-green-600 font-semibold text-lg"
-          data-aos="zoom-in"
-          data-aos-delay="100">Proyecto 2</span
-        >
-      </div>
-      <div
-        class="h-64 bg-white rounded-xl flex items-center justify-center shadow-md border border-purple-100 hover:shadow-xl transition-shadow"
-      >
-        <span
-          class="text-purple-600 font-semibold text-lg"
-          data-aos="zoom-in"
-          data-aos-delay="200">Proyecto 3</span
-        >
-      </div>
-      <div
-        class="h-64 bg-white rounded-xl flex items-center justify-center shadow-md border border-yellow-100 hover:shadow-xl transition-shadow"
-      >
-        <span
-          class="text-yellow-600 font-semibold text-lg"
-          data-aos="zoom-in"
-          data-aos-delay="300">Proyecto 4</span
-        >
-      </div>
-      <div
-        class="h-64 bg-white rounded-xl flex items-center justify-center shadow-md border border-pink-100 hover:shadow-xl transition-shadow"
-      >
-        <span
-          class="text-pink-600 font-semibold text-lg"
-          data-aos="zoom-in"
-          data-aos-delay="400">Proyecto 5</span
-        >
-      </div>
-      <div
-        class="h-64 bg-white rounded-xl flex items-center justify-center shadow-md border border-teal-100 hover:shadow-xl transition-shadow"
-      >
-        <span
-          class="text-teal-600 font-semibold text-lg"
-          data-aos="zoom-in"
-          data-aos-delay="500">Proyecto 6</span
-        >
-      </div>
-    </div>
-  </section> -->
-
-  <!-- CTA Final -->
   <section
     id="cta-final"
     class="min-h-screen flex flex-col justify-center items-center bg-white px-6 text-gray-900"
