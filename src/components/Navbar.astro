@@ -13,20 +13,21 @@ const links = [
   <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
     <!-- Logo -->
     <a href="#hero" class="text-2xl font-bold text-blue-600 hover:text-blue-800 transition-colors">
-      Zentrix Innovate
+        <img src="/logo-navbar.png" alt="Zentrix Innovate" class="h-14 w-auto duration-200 hover:scale-110" />
     </a>
 
     <!-- Links + CTA (desktop) -->
     <div class="hidden md:flex items-center gap-12">
       <ul class="flex gap-8 font-medium text-gray-700">
         {links.map((link) => (
-          <li>
-            <a href={link.href} class="hover:text-blue-600 transition-colors">{link.name}</a>
+          <li class="hover:scale-115 
+         transition-all duration-200 ease-in-out">
+            <a href={link.href} class="hover:text-blue-600 text-lg">{link.name}</a>
           </li>
         ))}
       </ul>
-      <a href="#cta-final" class="ml-4 px-5 py-2 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors shadow-md">
-        Transforma tu negocio
+      <a href="#cta-final" class="hover:scale-110 duration-200 ml-4 px-5 py-2 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors shadow-md">
+        Hablemos de tu proyecto
       </a>
     </div>
 

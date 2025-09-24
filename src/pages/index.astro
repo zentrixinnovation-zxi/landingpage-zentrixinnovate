@@ -6,29 +6,31 @@ import Layout from "../layouts/Layout.astro";
   <!-- Hero / Encabezado -->
   <section
     id="hero"
-    class="min-h-screen pt-28 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 px-6 md:px-16 bg-white text-gray-900"
+    class="min-h-screen pt-28 md:pt-0 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 px-6 md:px-16 bg-white text-gray-900"
   >
     <!-- Columna de texto -->
     <div class="flex-1 text-center md:text-left md:pl-12" data-aos="fade-up">
       <h1
-        class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-blue-600 leading-snug"
+        class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-blue-600 leading-tight"
       >
-        Zentrix Innovate
+        Impulsamos tu negocio con soluciones digitales a medida
       </h1>
       <p
-        class="text-xl text-gray-400 mb-2"
+        class="text-lg text-gray-600 mb-2"
         data-aos="fade-up"
         data-aos-delay="150"
       >
-        Transformamos ideas en soluciones digitales efectivas
+        Desarrollo web, aplicaciones y experiencias digitales diseñadas para
+        crecer contigo.
       </p>
       <p
-        class="text-base sm:text-lg md:text-xl mb-6 max-w-lg text-gray-500 mx-auto md:mx-0"
+        class="text-base sm:text-md md:text-lg mb-6 max-w-lg text-gray-500 mx-auto md:mx-0"
         data-aos="fade-up"
         data-aos-delay="300"
       >
-        Innovando para un futuro mejor: soluciones digitales que transforman tu
-        negocio.
+        En <span class="font-semibold text-blue-600">Zentrix Innovate</span> convertimos
+        ideas en herramientas digitales efectivas: páginas web rápidas, aplicaciones
+        escalables y soporte continuo para que tu negocio no se detenga.
       </p>
       <div
         class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
@@ -37,26 +39,26 @@ import Layout from "../layouts/Layout.astro";
       >
         <a
           href="#contacto"
-          class="px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors shadow-md"
+          class="px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold
+              hover:bg-blue-700 transition-all shadow-md
+              hover:-translate-y-1 hover:scale-105"
         >
-          Explora nuestros servicios
+          Quiero impulsar mi negocio
         </a>
       </div>
     </div>
 
     <!-- Columna de imagen / mockup -->
     <div
-      class="flex-1 flex justify-center mt-8 md:mt-0"
+      class="flex-1 flex justify-center mt-8 md:mt-0 shadow-2xl"
       data-aos="zoom-in"
       data-aos-delay="400"
     >
-      <div
-        class="w-full max-w-sm sm:max-w-md h-64 sm:h-80 bg-blue-50 rounded-lg flex items-center justify-center border border-blue-200 shadow-lg"
-      >
-        <span class="text-blue-600 font-semibold text-center px-4">
-          Logo / Imagen destacada aquí
-        </span>
-      </div>
+      <img
+        src="/hero-image.png"
+        alt="Zentrix Innovate - Soluciones digitales"
+        class="w-auto h-auto bg-cover hover:scale-110 duration-200"
+      />
     </div>
 
     <a
@@ -88,13 +90,11 @@ import Layout from "../layouts/Layout.astro";
   >
     <!-- Imagen / Video -->
     <div class="flex-1 flex justify-center mb-8 md:mb-0" data-aos="fade-right">
-      <div
-        class="w-full max-w-sm sm:max-w-md h-64 sm:h-96 bg-white rounded-xl flex items-center justify-center border border-blue-100 shadow-lg"
-      >
-        <span class="text-blue-600 font-semibold text-lg text-center px-4">
-          Imagen / Video aquí
-        </span>
-      </div>
+      <img
+        src="/problem-image.png"
+        alt="Zentrix Innovate - Problemas digitales"
+        class="w-auto h-auto bg-cover hover:scale-110 duration-200"
+      />
     </div>
 
     <!-- Texto -->
@@ -106,22 +106,25 @@ import Layout from "../layouts/Layout.astro";
       <h2
         class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-blue-800 leading-snug"
       >
-        El reto de nuestros clientes
+        Los retos digitales que frenan a tu negocio
       </h2>
       <p
         class="text-base sm:text-lg md:text-xl mb-4 sm:mb-6 max-w-lg text-gray-700 mx-auto md:mx-0"
       >
-        Muchos negocios enfrentan desafíos para digitalizarse, optimizar sus
-        procesos y llegar a sus clientes de manera efectiva. Nuestro objetivo es
-        mostrar cómo nuestras soluciones ayudan a superar estos obstáculos.
+        Muchos negocios pierden oportunidades porque sus procesos no están
+        digitalizados, sus páginas web no generan resultados o sus sistemas
+        simplemente no funcionan como deberían. En <span
+          class="font-semibold text-blue-600">Zentrix Innovate</span
+        >
+        entendemos estos desafíos y sabemos cómo resolverlos.
       </p>
       <a
         href="#solucion"
         data-aos="fade-up"
         data-aos-delay="400"
-        class="inline-block px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors shadow-md"
+        class="inline-block px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 hover:scale-110 duration-200 transition-colors shadow-md"
       >
-        Descubre la solución
+        Conoce nuestras soluciones
       </a>
     </div>
   </section>
@@ -129,32 +132,34 @@ import Layout from "../layouts/Layout.astro";
   <!-- Sección Solución / Servicios Destacados -->
   <section
     id="solucion"
-    class="min-h-screen pt-16 pb-16 flex flex-col justify-center items-center bg-white px-6"
+    class="min-h-screen pt-28 pb-10 flex flex-col justify-center items-center bg-white px-6"
   >
     <!-- Título y párrafo -->
     <div class="max-w-5xl mx-auto text-center" data-aos="fade-up">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-800">
-        Nuestra Solución
+      <h2 class="text-2xl md:text-4xl font-bold mb-4 text-blue-800">
+        Soluciones digitales que transforman tu negocio
       </h2>
-      <p class="text-lg text-gray-700 mb-8 text-center">
-        Desarrollamos sitios web, apps móviles y soluciones digitales a medida
-        para que tu negocio crezca y se destaque.
+      <p class="text-lg text-gray-700 mb-4 text-center">
+        En <span class="font-semibold text-blue-600">Zentrix Innovate</span> creamos
+        páginas web rápidas, aplicaciones móviles intuitivas y soluciones digitales
+        a medida que impulsan el crecimiento de tu negocio. Nuestro enfoque combina
+        diseño atractivo, tecnología escalable y soporte continuo, asegurando que
+        tu marca no solo tenga presencia en línea, sino que también conecte con más
+        clientes y se diferencie de la competencia.
       </p>
     </div>
 
     <!-- Imagen / mockup -->
     <div
-      class="w-full max-w-2xl mx-auto mb-12"
+      class="w-full max-w-2xl mx-auto mb-4 bg-transparent"
       data-aos="zoom-in"
       data-aos-delay="200"
     >
-      <div
-        class="w-full h-64 bg-white rounded-lg flex items-center justify-center border border-blue-200 shadow-md"
-      >
-        <span class="text-blue-600 font-semibold text-center">
-          Mockup / Imagen destacada aquí
-        </span>
-      </div>
+      <img
+        src="/solution-image.png"
+        alt="Zentrix Innovate - Solucion digital"
+        class="w-auto h-auto bg-cover hover:scale-110 duration-200"
+      />
     </div>
 
     <!-- Servicios / Beneficios -->
@@ -185,7 +190,9 @@ import Layout from "../layouts/Layout.astro";
         </div>
         <h3 class="text-xl font-semibold mb-2">Desarrollo Web</h3>
         <p class="text-gray-700">
-          Creamos sitios modernos, responsivos y optimizados.
+          Sitios modernos, rápidos y optimizados para atraer más visitantes y
+          convertirlos en clientes. Creamos páginas que no solo se ven bien,
+          sino que generan resultados medibles.
         </p>
       </div>
 
@@ -213,7 +220,11 @@ import Layout from "../layouts/Layout.astro";
           </svg>
         </div>
         <h3 class="text-xl font-semibold mb-2">Apps Móviles</h3>
-        <p class="text-gray-700">Aplicaciones intuitivas para Android e iOS.</p>
+        <p class="text-gray-700">
+          Aplicaciones intuitivas para Android e iOS, diseñadas para mejorar la
+          experiencia de tus usuarios y fidelizar clientes. Funcionales,
+          escalables y listas para crecer con tu negocio.
+        </p>
       </div>
 
       <!-- Servicio 3 -->
@@ -242,7 +253,9 @@ import Layout from "../layouts/Layout.astro";
         </div>
         <h3 class="text-xl font-semibold mb-2">WordPress / CMS</h3>
         <p class="text-gray-700">
-          Soluciones fáciles de gestionar y escalar tu negocio.
+          Plataformas fáciles de administrar, seguras y escalables. Te damos
+          control total de tu contenido para que actualices tu sitio sin
+          depender de terceros y con total confianza.
         </p>
       </div>
     </div>
@@ -258,8 +271,11 @@ import Layout from "../layouts/Layout.astro";
         Cómo trabajamos
       </h2>
       <p class="text-gray-700 text-lg">
-        Nuestro proceso asegura resultados efectivos y eficientes. Cada etapa
-        está diseñada para maximizar el impacto y la calidad de tu proyecto.
+        En <span class="font-semibold text-blue-600">Zentrix Innovate</span> creemos
+        que un buen resultado no es casualidad: es el fruto de un proceso claro y
+        colaborativo. Por eso, cada etapa está diseñada para transformar tus ideas
+        en soluciones digitales sólidas, con un enfoque en calidad, innovación y
+        crecimiento real para tu negocio.
       </p>
     </div>
 
@@ -277,8 +293,9 @@ import Layout from "../layouts/Layout.astro";
         </div>
         <h3 class="text-2xl font-semibold mb-2">Planificación</h3>
         <p class="text-gray-600">
-          Analizamos tu proyecto y definimos objetivos claros, creando un plan
-          estratégico.
+          Analizamos tu proyecto y definimos objetivos claros. Creamos un plan
+          estratégico que asegura un camino sólido hacia el éxito, evitando
+          riesgos y maximizando recursos.
         </p>
       </div>
 
@@ -295,8 +312,9 @@ import Layout from "../layouts/Layout.astro";
         </div>
         <h3 class="text-2xl font-semibold mb-2">Desarrollo</h3>
         <p class="text-gray-600">
-          Diseñamos y desarrollamos soluciones adaptadas a tus necesidades con
-          creatividad y tecnología de punta.
+          Transformamos tus ideas en soluciones digitales a medida. Usamos
+          tecnología de vanguardia y diseño atractivo para que tu producto sea
+          funcional, escalable y memorable.
         </p>
       </div>
 
@@ -313,24 +331,26 @@ import Layout from "../layouts/Layout.astro";
         </div>
         <h3 class="text-2xl font-semibold mb-2">Lanzamiento & Optimización</h3>
         <p class="text-gray-600">
-          Implementamos, revisamos y entregamos con soporte garantizado,
-          asegurando tu satisfacción.
+          Ponemos en marcha tu proyecto con total soporte y mejoras continuas.
+          No solo lanzamos, sino que optimizamos para que tu negocio crezca de
+          forma sostenible.
         </p>
       </div>
     </div>
   </section>
 
   <!-- Portafolio / Proyectos -->
-  <section
+  <!-- <section
     id="portafolio"
-    class="pt-38 pb-24 bg-gray-50 px-6 flex flex-col items-center"
+    class="pt-28 pb-24 bg-gray-50 px-6 flex flex-col items-center"
   >
     <div class="max-w-5xl text-center mb-12">
       <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-800">
-        Portafolio
+        Proyectos destacados
       </h2>
       <p class="text-gray-700 text-lg">
-        Algunos de nuestros proyectos recientes o ejemplos de trabajo.
+        Estas son algunas de las soluciones digitales que hemos desarrollado
+        para ayudar a negocios a crecer, innovar y diferenciarse.
       </p>
     </div>
 
@@ -392,33 +412,38 @@ import Layout from "../layouts/Layout.astro";
         >
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- CTA Final -->
   <section
     id="cta-final"
-    class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-r from-blue-50 to-blue-100 px-6 text-gray-900"
+    class="min-h-screen flex flex-col justify-center items-center bg-white px-6 text-gray-900"
   >
     <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
       <p
         class="text-lg text-blue-700 mb-4 font-semibold uppercase tracking-wide"
       >
-        ¿Listo para comenzar?
+        ¿Listo para dar el siguiente paso?
       </p>
-      <h2 class="text-3xl md:text-5xl font-bold mb-6 text-blue-800">
-        Impulsa tu proyecto con Zentrix Innovate
+      <h2
+        class="text-3xl md:text-5xl font-bold mb-6 text-blue-800 leading-snug"
+      >
+        Transforma tus ideas en <span class="text-blue-600"
+          >soluciones digitales</span
+        > que generan resultados
       </h2>
       <p class="text-gray-700 mb-12 text-lg">
-        Hablemos de tus ideas y llevemos tu negocio al siguiente nivel con
-        soluciones digitales a medida.
+        En <span class="font-semibold text-blue-600">Zentrix Innovate</span> te ayudamos
+        a crecer con sitios web modernos, apps intuitivas y tecnología hecha a tu
+        medida. Es el momento de destacar y conectar con más clientes.
       </p>
       <a
         href="#contacto"
         data-aos="zoom-in"
         data-aos-delay="200"
-        class="px-10 py-4 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors shadow-lg transform hover:scale-105"
+        class="px-10 py-4 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-all shadow-lg transform hover:scale-110 duration-200"
       >
-        Comienza tu proyecto
+        Comenzar ahora
       </a>
     </div>
   </section>
