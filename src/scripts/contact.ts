@@ -14,12 +14,25 @@ export default function setupContactForm(): void {
       message: (form.elements.namedItem("message") as HTMLInputElement).value,
     };
 
+    Swal.fire({
+      title: "Enviando...",
+      text: "Por favor espera",
+      allowOutsideClick: false,
+      allowEscapeKey: false,
+      didOpen: () => {
+        Swal.showLoading();
+      },
+    });
+
     try {
-      const res = await fetch("https://nodemailer-zentrixinnovate.onrender.com/api/send-message", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const res = await fetch(
+        "https://nodemailer-zentrixinnovate.onrender.com/api/send-message",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const data = await res.json();
 
