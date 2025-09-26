@@ -12,6 +12,7 @@
     "@tailwindcss/vite": "^4.1.13",
     "aos": "^2.3.4",
     "astro": "^5.13.9",
+    "sweetalert2": "^11.23.0",
     "tailwindcss": "^4.1.13"
   },
   "devDependencies": {
